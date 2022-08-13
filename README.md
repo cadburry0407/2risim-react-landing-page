@@ -1,3 +1,9 @@
+# 2rism Landing Page using ReactJS
+
+Figma design converted to html,css,scss and javascript. Fully responsive design using Grid and Flex. visit at 
+
+Design Credit: https://www.figma.com/@vittorioewing
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
