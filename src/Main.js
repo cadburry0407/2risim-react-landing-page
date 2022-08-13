@@ -3,10 +3,9 @@ import './styles/search.scss';
 import './styles/slogan.scss';
 import sprite from './images/sprite.svg';
 
-
 const Main = () => {
   return (
-    <div className="main">
+    <div className="main" id="main">
       <div className="container">
         <div className="header-content">
           <div className="slogan">

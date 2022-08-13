@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from 'react-scroll';
+
 import { useState, useEffect } from 'react';
+
 import './styles/navbar.scss';
 
 import logo from './images/logo.png';
@@ -26,39 +29,39 @@ const Navbar = () => {
 
           <ul className="nav__links">
             <li>
-              <a href="/" className="nav__links-item active">
+              <Link to="main" offset={-70} className="nav__links-item active">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#hotels" className="nav__links-item">
+              <Link to="hotels" className="nav__links-item">
                 Hotels
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#hotels" className="nav__links-item">
+              <Link to="hotels" className="nav__links-item">
                 Restaurants
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#tours" className="nav__links-item">
+              <Link to="tours" className="nav__links-item">
                 Tours
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#destinations" className="nav__links-item">
+              <Link to="destinations" className="nav__links-item">
                 Destinations
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#activities" className="nav__links-item">
-                Activites
-              </a>
+              <Link to="Activities" className="nav__links-item">
+                Activities
+              </Link>
             </li>
             <li>
-              <a href="#aboutus" className="nav__links-item">
+              <Link to="aboutus" className="nav__links-item">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -75,7 +78,6 @@ const Navbar = () => {
           </div>
 
           <button
-            // className="nav__btn-toggle-menu"
             className={
               isActive
                 ? 'nav__btn-toggle-menu activated'
@@ -91,25 +93,25 @@ const Navbar = () => {
           <div className={isActive ? 'menu activated' : 'menu'} id="menu">
             <ul className="menu__list">
               <li className="menu__list-item">
-                <a href="/">Home</a>
+                <Link to="main">Home</Link>
               </li>
               <li className="menu__list-item">
-                <a href="#hotels">Hotels</a>
+                <Link to="hotels">Hotels</Link>
               </li>
               <li className="menu__list-item">
-                <a href="#hotels">Restaurant Us</a>
+                <Link to="hotels">Restaurant Us</Link>
               </li>
               <li className="menu__list-item">
-                <a href="#tours">Tours</a>
+                <Link to="tours">Tours</Link>
               </li>
               <li className="menu__list-item">
-                <a href="#destinations">Destinations</a>
+                <Link to="destinations">Destinations</Link>
               </li>
               <li className="menu__list-item">
-                <a href="#activites">Activites</a>
+                <Link to="activities">Activities</Link>
               </li>
               <li className="menu__list-item">
-                <a href="#aboutus">Contact</a>
+                <Link to="aboutus">Contact</Link>
               </li>
             </ul>
           </div>
