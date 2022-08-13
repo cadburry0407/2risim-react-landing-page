@@ -93,7 +93,9 @@ const Navbar = () => {
           <div className={isActive ? 'menu activated' : 'menu'} id="menu">
             <ul className="menu__list">
               <li className="menu__list-item">
-                <Link to="main">Home</Link>
+                <Link to="main" offset={-70}>
+                  Home
+                </Link>
               </li>
               <li className="menu__list-item">
                 <Link to="hotels">Hotels</Link>
