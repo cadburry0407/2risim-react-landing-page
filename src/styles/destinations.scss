@@ -1,0 +1,33 @@
+@use '../mixin.scss' as mixin;
+
+.destinations-container {
+  .container {
+    margin: 0 auto;
+    padding-top: 12rem;
+  }
+
+  .destinations {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3.2rem;
+
+    @include mixin.bp-medium {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    @include mixin.bp-small {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    h1 {
+      grid-column: 1 / -1;
+      grid-row: 1/ 2;
+    }
+
+    .popular-items {
+      h3 {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

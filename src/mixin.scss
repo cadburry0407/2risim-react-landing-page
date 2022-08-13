@@ -1,0 +1,50 @@
+$color-primary-light-1: #fff;
+$color-primary-light-2: #ffa800;
+$color-primary-light-3: #7b61ff;
+$color-primary-dark-1: #161414;
+$color-primary-dark-2: #5b5b5b;
+$color-primary-dark-3: #878787;
+$color-primary-dark-4: #979797;
+
+// responsive breakpoints
+@mixin bp-largest {
+  // 1200px / 16
+  @media only screen and (max-width: 75em) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  // 1000px / 16
+  @media only screen and (max-width: 62.5em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  // 800px / 16
+  @media only screen and (max-width: 50em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  // 600px // 16
+  @media only screen and (max-width: 37.5em) {
+    @content;
+  }
+}
+
+@mixin bp-smallest {
+  // 450px / 16
+  @media only screen and (max-width: 28.125em) {
+    @content;
+  }
+}
+
+@mixin bp-extra-small {
+  // 350px / 16
+  @media only screen and (max-width: 21.875em) {
+    @content;
+  }
+}

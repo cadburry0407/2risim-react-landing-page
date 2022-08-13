@@ -1,0 +1,185 @@
+@use '../mixin.scss' as mixin;
+
+.nav {
+  padding: 1.5rem 0 1.5rem 0;
+  z-index: 9999;
+
+  position: fixed;
+  width: 100%;
+  background-color: black;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .logo-link {
+    display: block;
+  }
+
+  &.activated {
+    background-color: black;
+  }
+
+  @include mixin.bp-medium {
+    justify-content: flex-start;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+  }
+
+  &__logo {
+    width: 8.8rem;
+    height: 3.6rem;
+
+    @include mixin.bp-medium {
+      margin-right: auto;
+    }
+  }
+
+  &__links {
+    display: flex;
+
+    margin: 0 2.3rem 0 2.3rem;
+
+    list-style: none;
+    font-size: 1.4rem;
+
+    @include mixin.bp-largest {
+      margin: 0rem;
+    }
+
+    @include mixin.bp-medium {
+      display: none;
+    }
+
+    &-item {
+      color: mixin.$color-primary-dark-3;
+      text-decoration: none;
+      display: block;
+    }
+
+    &-item.active {
+      color: mixin.$color-primary-light-1;
+    }
+  }
+
+  &__links li:not(:last-child) {
+    margin-right: 5.4rem;
+
+    @include mixin.bp-largest {
+      margin-right: 2rem;
+    }
+  }
+
+  &__user {
+    display: flex;
+
+    &-picture {
+      width: 4.8rem;
+      height: 4.8rem;
+
+      @include mixin.bp-extra-small {
+        display: none;
+      }
+    }
+
+    &-profile {
+      margin-right: 1rem;
+      &-greeting {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: mixin.$color-primary-dark-3;
+      }
+
+      &-name {
+        color: mixin.$color-primary-light-1;
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .menu {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 7rem;
+    right: 0rem;
+    z-index: 9999;
+    background-color: rgb(29, 29, 29);
+    transform: translateX(100%);
+    transition: transform 0.25s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+
+    &__list {
+      list-style: none;
+      font-size: 2.5rem;
+      text-align: center;
+
+      &-item a {
+        padding: 0.5rem 0;
+        text-decoration: none;
+        color: azure;
+        display: block;
+        transition: all 0.2s ease-in-out;
+
+        display: inline-block;
+        position: relative;
+      }
+
+      &-item a:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffa800;
+        transform-origin: bottom right;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &-item a:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+      &-item a:hover {
+        color: #ffa800;
+        transform: scale(110%);
+      }
+    }
+
+    &.activated {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .nav__btn-toggle-menu {
+    color: #ffa800;
+    border: none;
+    background-color: transparent;
+    font-size: 3.5rem;
+    cursor: pointer;
+    margin-left: 2rem;
+    display: none;
+
+    @include mixin.bp-medium {
+      display: block;
+    }
+
+    &.activated .open-menu-icon {
+      display: none;
+    }
+
+    &.activated .close-menu-icon {
+      display: block;
+    }
+
+    & .close-menu-icon {
+      display: none;
+    }
+  }
+}

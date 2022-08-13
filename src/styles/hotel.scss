@@ -1,0 +1,41 @@
+@use '../mixin.scss' as mixin;
+
+.hotel-restaurant-container {
+  .container {
+    margin: 0 auto;
+    padding-top: 12rem;
+  }
+
+  .hotel-restaurant {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.2rem;
+
+    .hotel-restaurant-item {
+      h3 {
+        margin-top: 1rem;
+      }
+
+      .ratings {
+        display: flex;
+        justify-content: space-between;
+
+        @include mixin.bp-largest {
+          flex-direction: column;
+
+          .stars {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+
+    @include mixin.bp-medium {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixin.bp-small {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+  }
+}

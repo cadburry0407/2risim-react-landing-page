@@ -1,0 +1,61 @@
+@use '../mixin.scss' as mixin;
+
+.tips-advice-container {
+  .container {
+    margin: 0 auto;
+    padding-top: 12rem;
+  }
+
+  .tips-advice {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.2rem;
+
+    @include mixin.bp-medium {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixin.bp-small {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    .tips-advice__description {
+      display: flex;
+      flex-direction: column;
+
+      .text-light-2 {
+        margin-top: 1rem;
+        margin-bottom: auto;
+      }
+
+      &-details {
+        display: flex;
+        //   justify-content: space-between;
+
+        & > * {
+          display: flex;
+          align-items: center;
+          margin-right: 2rem;
+        }
+
+        p {
+          cursor: pointer;
+          margin-left: 0.5rem;
+          font-size: 1.3rem;
+          font-weight: 400;
+          color: mixin.$color-primary-dark-3;
+        }
+
+        @include mixin.bp-largest {
+          margin-top: 2rem;
+          flex-direction: column;
+        }
+
+        @include mixin.bp-small {
+          margin-top: 2rem;
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}

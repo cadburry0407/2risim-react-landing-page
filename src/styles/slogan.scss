@@ -1,0 +1,51 @@
+@use '../mixin.scss' as mixin;
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include mixin.bp-small {
+    padding: 0 2rem 0 2rem;
+  }
+
+  h1 {
+    color: mixin.$color-primary-light-1;
+    font-weight: 600;
+    font-size: 4.8rem;
+
+    @include mixin.bp-small {
+      font-size: 3rem;
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 1.2rem;
+    background-color: #7b61ff;
+    color: mixin.$color-primary-light-1;
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 27rem;
+    height: 7rem;
+    margin-top: 2rem;
+
+    svg {
+      margin-right: 0.8rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: mixin.$color-primary-light-1;
+    }
+
+    @include mixin.bp-small {
+      width: 23rem;
+      height: 6rem;
+      font-size: 1.6rem;
+    }
+  }
+}
