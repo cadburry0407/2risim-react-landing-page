@@ -23,9 +23,9 @@ const Navbar = () => {
     <>
       <nav className="nav" id="header">
         <div className="container">
-          <a href="/" className="logo-link">
+          <Link to="main" className="logo-link">
             <img src={logo} alt="2rism logo" className="nav__logo" />
-          </a>
+          </Link>
 
           <ul className="nav__links">
             <li>
